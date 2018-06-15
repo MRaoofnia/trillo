@@ -1,0 +1,56 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-lg-dark-1);
+    color: var(--color-grey-dark-2);
+
+    @include respond(first) {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.side-bar {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.legal {
+    color:  var(--color-grey-light-4);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 1.2rem;
+
+    @include respond(third) {
+        display: none;
+    }
+}
+
+.main {
+    flex: 1;
+    min-height: 75rem; // test
+
+    @include respond(first) {
+        background-color: var(--color-grey-light-1);
+    }
+}
+
+.content {
+    display: flex;
+
+    @include respond(first) {
+        flex: 1;
+    }
+
+    @include respond(third) {
+        flex-direction: column;
+    }
+}

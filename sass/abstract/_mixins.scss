@@ -1,0 +1,49 @@
+/* Responsive Manager
+
+====Breakpoints:========
+
+=====================
+
+====Valid Argumants:====
+
+========================
+
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == nineth {
+        @media only screen and (max-width: 20.3125em) { @content }; //325px
+    }
+
+    @if $breakpoint == eighth {
+        @media only screen and (max-width: 21.875em) { @content }; //350px
+    }
+
+    @if $breakpoint == seventh {
+        @media only screen and (max-width: 34.375em) { @content }; //550px
+    }
+
+    @if $breakpoint == sixth {
+        @media only screen and (max-width: 40em) { @content }; //640px
+    }
+
+    @if $breakpoint == fifth {
+        @media only screen and (max-width: 48.75em) { @content }; //780px
+    }
+
+    @if $breakpoint == fourth {
+        @media only screen and (max-width: 53.125em) { @content }; //850px
+    }
+
+    @if $breakpoint == third {
+        @media only screen and (max-width: 59.375em) { @content }; //950px
+    }
+    
+    @if $breakpoint == second {
+        @media only screen and (max-width: 65.625em) { @content }; //1050px
+    }
+    
+    @if $breakpoint == first {
+        @media only screen and (max-width:  76.25em) { @content }; //1220px
+    }
+}

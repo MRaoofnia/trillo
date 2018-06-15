@@ -1,0 +1,80 @@
+.btn-inline {
+    &:link,
+    &:visited {
+        color: var(--color-primary);
+        border-bottom: 1px solid currentColor;
+        padding-bottom: .2rem;
+        text-decoration: none;
+        font-size: inherit;
+        background-color: transparent;
+        transition: all .2s;
+    }
+
+    &__span {
+        margin-left: .5rem;
+        transition: margin-left .2s;
+    }
+
+    &:hover &__span {
+        margin-left: 1rem
+    }
+
+    &:hover {
+        color: var(--color-primary-dark);
+    }
+
+    &:focus {
+        outline: none;
+        animation: impulse .8s infinite;
+    }
+}
+
+.btn-primary {
+
+    position: relative;
+
+    &:link,
+    &:visited {
+        display: inline-block;
+        border: none;
+        text-decoration: none;
+        font-size: inherit;
+        color: var(--color-white);
+        background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+        border-radius: 100px;
+        overflow: hidden;
+    }
+
+    &__visible {
+        display: inline-block;
+        padding: 2rem 7rem;
+        transition: all .2s;
+    }
+
+    &__invisible {
+        display: inline-block;
+        position: absolute;
+        padding: 2rem 0;
+        width: 100%;
+        top: -100%;
+        left: 0;
+        transition: all .2s;
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+
+    &:hover &__invisible {
+        top: 0;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+
+    &:focus {
+        outline: none;
+        animation: impulse .8s infinite;
+    }
+}

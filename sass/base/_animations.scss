@@ -1,0 +1,16 @@
+@keyframes impulse {
+    0% {
+        scale: (1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.03);
+        box-shadow: var(--shadow-sm-dark-1);
+    }
+
+    100% {
+        scale: (1);
+        box-shadow: none;
+    }
+}

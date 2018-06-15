@@ -1,0 +1,25 @@
+.header {
+
+    height: 7rem;
+    background-color: var(--color-grey-light-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 3.5rem;
+    border-bottom: var(--border);
+
+    @include respond (sixth) {
+        flex-wrap: wrap; 
+        height: 12rem;
+        align-content: space-around;
+        padding: 0;
+    }
+    
+    &__logo {
+        height: 3.25rem;
+
+        @include respond (sixth) {
+            margin-left: 2rem;
+        }
+    }
+}
